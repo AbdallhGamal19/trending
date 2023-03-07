@@ -1,0 +1,111 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat+Alternates:wght@300&display=swap');
+
+$bgColor: #131722;
+$lightBgColor: rgba(30, 41, 82, 0.1);
+$bgTransparent: rgba(19, 91, 117, 0.6);
+$fontColor: #fff;
+$borderColor: #a8a8a83d;
+$borderHeight: 1px;
+$secondFontColor: #949cb0;
+
+body {
+    background-color: $bgColor;
+    // position: relative;
+    color: $fontColor;
+    font-family: 'Montserrat Alternates', sans-serif;
+}
+
+.borderOfAdress {
+    background-color: $borderColor;
+    height: $borderHeight;
+
+}
+
+p {
+    color: $secondFontColor;
+}
+.info-of-user {
+    background-color: #202637c3;
+    width: 75%;
+    @media screen and (max-width:768px) {
+        width: 100%;
+    }
+}
+#loader {
+    
+background-color: $bgColor;
+        position: absolute;
+        inset: 0;
+        z-index: 99999999999;
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+}
+
+@keyframes loader {
+    0% {
+        left: -100px
+    }
+
+    100% {
+        left: 110%;
+    }
+}
+
+#box {
+    width: 50px;
+    height: 50px;
+    background: #fff;
+    animation: animate .5s linear infinite;
+    position: absolute;
+    z-index: 9999;
+ 
+    
+    border-radius: 3px;
+}
+
+@keyframes animate {
+    17% {
+        border-bottom-right-radius: 3px;
+    }
+
+    25% {
+        transform: translateY(9px) rotate(22.5deg);
+    }
+
+    50% {
+        transform: translateY(18px) scale(1, .9) rotate(45deg);
+        border-bottom-right-radius: 40px;
+    }
+
+    75% {
+        transform: translateY(9px) rotate(67.5deg);
+    }
+
+    100% {
+        transform: translateY(0) rotate(90deg);
+    }
+}
+
+#shadow {
+    width: 50px;
+    height: 5px;
+    background: rgb(183, 180, 180);
+    opacity: 0.1;
+    position: absolute;
+    z-index: 9999;
+    top: 56%;
+    border-radius: 50%;
+    animation: shadow .5s linear infinite;
+}
+
+@keyframes shadow {
+    50% {
+        transform: scale(1.2, 1);
+    }
+}
+
+
+
+
